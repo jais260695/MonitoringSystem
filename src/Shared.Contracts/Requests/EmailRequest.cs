@@ -11,4 +11,15 @@ public sealed class EmailRequest
 
     [Required]
     public string Message { get; set; } = string.Empty;
+
+    public EmailRequest()
+    {
+    }
+
+    public EmailRequest(string email, string subject, string message)
+    {
+        Email = email;
+        Subject = subject;
+        Message = message;
+    }
 }

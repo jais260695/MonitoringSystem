@@ -1,7 +1,11 @@
 ﻿using Shared.Contracts.Requests;
 using Shared.Contracts.Responses;
 
+namespace OrderService.Services;
+
 public interface IOrderService
 {
-    Task<ApiResponse> CreateOrderAsync(CreateOrderRequest request);
+    Task<ApiResponse<CreateOrderResponse>> CreateOrderAsync(
+        CreateOrderRequest request,
+        CancellationToken cancellationToken);
 }

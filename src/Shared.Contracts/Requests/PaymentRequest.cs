@@ -8,4 +8,14 @@ public sealed class PaymentRequest
     [Required]
     [EmailAddress]
     public string CustomerEmail { get; set; } = string.Empty;
+
+    public PaymentRequest()
+    {
+    }
+
+    public PaymentRequest(decimal amount, string customerEmail)
+    {
+        Amount = amount;
+        CustomerEmail = customerEmail;
+    }
 }
